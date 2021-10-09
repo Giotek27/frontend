@@ -4,8 +4,8 @@
     <form @submit.prevent="actualizartabla" :v-model="editarusuario">
         <label>Nombre:</label>
         <input type="text" v-model="datos.nombre"><br>
-        <label>cedula:</label>
-        <input type="number" v-model="datos.cedula"><br>
+        <label>Nit:</label>
+        <input type="number" v-model="datos.Nit"><br>
         <label>Correo:</label>
         <input type="text"  v-model="datos.correo"><br>
         <label>telefono:</label>
@@ -24,7 +24,7 @@
         
     </form>
     <div>
-    <router-link :to="{name:'vendedoresnaturales'}" class="btn btn-summary" >Cancelar</router-link>
+    <router-link :to="{name:'vendedoresjuridicos'}" class="btn btn-summary" >Regresar</router-link>
     </div>
 </div>
 
@@ -37,7 +37,7 @@
           return{
               datos:{
                   nombre:"",
-                  cedula:1234567,
+                  Nit:1234567,
                   correo:"",
                   telefono:1234567,
                   direccion:"",
@@ -51,7 +51,7 @@
           }
         }, 
         created(){
-            let apiURL=`https://backend54-7.herokuapp.com/buscavendedor/${this.$route.params.id}`;
+            let apiURL=`https://backend54-7.herokuapp.com/buscavendedorJuridico/${this.$route.params.id}`;
             axios.get(apiURL).then((res)=>{
                 this.datos=res.data;
             });
@@ -59,7 +59,7 @@
         methods:{
             //este metodo actualiza la tabla que está en heroku
             actualizartabla(){
-                axios.put(`https://backend54-7.herokuapp.com/actualizarVendedorN/${this.$route.params.id}`,this.datos).then(()=>alert("Se actualizo correctamente"));
+                axios.put(`https://backend54-7.herokuapp.com/actualizarVendedorJ/${this.$route.params.id}`,this.datos).then(()=>alert("Se actualizo correctamente"));
             }  
         }
     } 

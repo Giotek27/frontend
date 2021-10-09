@@ -46,11 +46,17 @@
 </template>
 
 <script>
-
+import axios from'axios';
 export default{
   name: 'Tabla',
+  usuarios:[
+      
+  ],
   props:{
       dato: Object
   },
+   created(){
+            axios.get("https://backend54-7.herokuapp.com/vendedorConsulta").then((res)=>this.usuarios=res.data);
+        },
 }
 </script>

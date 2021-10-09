@@ -1,5 +1,4 @@
 <template>
-<div>
     <form @submit.prevent="enviarBackendN">
         <label>Nombre:</label>
         <input type="text" v-model="datos.nombre"><br>
@@ -20,13 +19,7 @@
         <label>Cantidad de Plastico:</label>
         <input type="number"  v-model="datos.cantidad_plastic"><br>
         <button>Enviar</button>
-       <div>
-        <router-link class="btn-danger" :to="{name:'vendedoresnaturales'}">cancelar</router-link>
-    </div>
     </form>
-    
-</div>
-     
 </template>
 
 <script>
@@ -35,22 +28,24 @@
         data(){
           return{
               datos:{
-                  nombre:"Pepito",
-                  cedula:1234567,
-                  correo:"correo@example.com",
+                  nombre:"",
+                  Nit:1234567,
+                  correo:"",
                   telefono:1234567,
-                  direccion:"calle falsa 123",
-                  ciudad:"Bogota",
-                  Tipo_plastic:"papel",
-                  estado_plastic:"bueno",
-                  cantidad_plastic:10
+                  direccion:"",
+                  ciudad:"",
+                  Tipo_plastic:"",
+                  cantidad_plastic:10,
+                  estado_plastic:""
+                  
               }
           }
+        }, 
+        created(){
+            let apiURL=`https://backend54-7.herokuapp.com/buscavendedorJuridico/${this.$route.params.id}`;
+            axios.get(apiURL).then((res)=>{
+                this.datos=res.data;
+            });
         },
-        methods:{
-            enviarBackendN(){
-                axios.post("https://backend54-7.herokuapp.com/creacionVendedor",this.datos).then(()=>alert("Producto creado"));
-            }
-        } 
-    }  
+    } 
 </script>

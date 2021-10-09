@@ -34,15 +34,22 @@ const routes=[
         component:()=>import("../components/editarVendedorN.vue")
     },
     {
-        path:"/consultarvendedorn",
-        name:"consultarvendedorn",
-        component:()=>import("../components/consultaVendedorN.vue")
+        path:"/editarvendedorj",
+        name:"editarvendedorj",
+        component:()=>import("../components/editarVendedorJ.vue")
     },
+    
     {
         path:"/crearvendedorn",
         name:"crearvendedorn",
         component:()=>import("../components/formVendedorN.vue")
+    },
+    {
+        path:"/crearvendedorj",
+        name:"crearvendedorj",
+        component:()=>import("../components/formVendedorJ.vue")
     }
+    
 ];
 
 const router=new VueRouter({
