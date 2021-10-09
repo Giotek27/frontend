@@ -11,7 +11,7 @@ const routes=[
     {
         path:"/paneladministracion",
         name:"InicioPanelAdmin",
-        component:()=>import("../components/InicioAdmin.vue")
+        component:()=>import("../views/InicioPanelAdmin.vue")
     },
     {
         path:"/vendedoresnaturales",
