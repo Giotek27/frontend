@@ -4,7 +4,12 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 const routes=[
     {
-        path:"/",
+        path:"/login",
+        name:"login",
+        component:()=>import("../views/loginAdmin.vue")
+    },
+    {
+        path:"/paneladministracion",
         name:"InicioPanelAdmin",
         component:()=>import("../components/InicioAdmin.vue")
     },
@@ -48,7 +53,33 @@ const routes=[
         path:"/crearvendedorj",
         name:"crearvendedorj",
         component:()=>import("../components/formVendedorJ.vue")
-    }
+    },
+    {
+        path:"/crearservicios",
+        name:"crearservicios",
+        component:()=>import("../components/formservicios.vue")
+    },
+    {
+        path:"/crearventas",
+        name:"crearventas",
+        component:()=>import("../components/formventas.vue")
+    },
+    {
+        path:"/editarservicios",
+        name:"editarservicios",
+        component:()=>import("../components/editarservicios.vue")
+    },
+    {
+        path:"/editarventas",
+        name:"editarventas",
+        component:()=>import("../components/editarventas.vue")
+    },
+    {
+        path:"/servicioscompra",
+        name:"servicioscompra",
+        component:()=>import("../components/Serviciosclientes.vue")
+    },
+
     
 ];
 
