@@ -21,7 +21,7 @@
         <input type="number"  v-model="datos.cantidad_plastic"><br>
         <button>Enviar</button>
        <div>
-        <router-link class="btn-danger" :to="{name:'vendedoresnaturales'}">cancelar</router-link>
+        <router-link class="btn-btn-danger" :to="{name:'vendedoresnaturales'}">Regresar</router-link>
     </div>
     </form>
     

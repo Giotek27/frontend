@@ -24,7 +24,7 @@
         
     </form>
     <div>
-    <router-link :to="{name:'vendedoresjuridicos'}" class="btn btn-summary" >Regresar</router-link>
+    <router-link :to="{name:'vendedoresjuridicos'}" class="btn-btn-summary" >Regresar</router-link>
     </div>
 </div>
 

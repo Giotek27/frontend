@@ -22,7 +22,7 @@
         
         <button>Enviar</button>
        <div>
-        <router-link class="btn-danger" :to="{name:'vendedoresjuridicos'}">Regresar</router-link>
+        <router-link class="btn-btn-danger" :to="{name:'vendedoresjuridicos'}">Regresar</router-link>
     </div>
     </form>
     
