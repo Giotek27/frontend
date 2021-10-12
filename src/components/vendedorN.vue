@@ -2,7 +2,7 @@
 <div>
 <h1>Tabla de datos de vendedores naturales</h1>
     <div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <div class="container-fluid"> 
                 <nav class="navbar navbar-dark">
                     <div class="container-fluid">
@@ -32,7 +32,7 @@
                 </b-nav-item>
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <b-nav-item><li class="nav-item">      
-                        <button type="button" class="btn btn-success" @click.prevent="actualizarpagina()">Volver</button>
+                        <button type="button" class="btn btn-primary" @click.prevent="actualizarpagina()">Volver</button>
                     </li></b-nav-item>
                 </ul>
                 

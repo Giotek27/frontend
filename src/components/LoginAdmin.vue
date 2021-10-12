@@ -4,7 +4,11 @@
   <div class="row justify-content-center pt-5 mt-5 m-1 LoginAdmin" >
     
     <h1>{{ msg }}</h1>
-    <div class="col-md-6 col-sm-8 col-xl-4 col-lg-5">
+      <p id="parrafo1">Este es un login de administrador
+        Si usted no es un operador de la plataforma no tiene necesidad de iniciar sesion.
+      </p>
+    <div class="col-md-10 col-sm-10 col-xl-11 col-lg-10">
+      
     <b-form @submit.prevent="buscarUsuario()" v-if="show" class="form-group mx-sm-4 pt-3">
     <b-card>
       <b-form-group
@@ -30,7 +34,7 @@
           required
         ></b-form-input>
       </b-form-group>
-      <b-button type="submit" variant="primary">Ingresar</b-button>
+      <b-button type="submit" variant="primary" >Ingresar</b-button>
       </b-card>
     </b-form>
     </div>
@@ -71,14 +75,18 @@ export default {
                 if(this.form.username === value.username){
                     console.log("El usuario existe");
                     if(this.form.password === value.password){
-                        console.log("El password es correcto");
+                        
                         window.localStorage.setItem('autenticacion', 'ok');
                         this.$router.push({path:'/paneladministracion'});
+                    }else{
+                        alert("Contraseña incorrecta");
                     }
+                    
                 }
             });
           })
-      }
+      },
+
   },
   beforeCreate(){
         
@@ -88,6 +96,7 @@ export default {
             this.$router.push({path:'/paneladministracion'})
         }
     }
+
 }
 </script>
 
@@ -105,10 +114,15 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
+  color: #0380a7;
 }
 
 
+
+#parrafo1{
+  width:600px;
+  margin: 0px auto;
+}
 .form-control {
     background: rgb(235, 232, 232);
     border-style: solid;

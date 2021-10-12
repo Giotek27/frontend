@@ -15,7 +15,7 @@
                     Acá se encuentran todos los vendedores naturales registrados en el sistema.
                 </b-card-text>
 
-                <b-button :to="{name: 'vendedoresnaturales'}" variant="success">ir a esta tabla</b-button>
+                <b-button :to="{name: 'vendedoresnaturales'}" variant="primary">ir a esta tabla</b-button>
                 </b-card ></b-col>
                 <b-col><b-card
                     title="Vendedor Jurídico"
@@ -27,7 +27,7 @@
                    Acá se encuentran todos los vendedores Juridicos registrados en el sistema.
                 </b-card-text>
 
-                <b-button :to="{name: 'vendedoresjuridicos'}" variant="success">ir a esta tabla</b-button>
+                <b-button :to="{name: 'vendedoresjuridicos'}" variant="primary">ir a esta tabla</b-button>
                 </b-card></b-col>
                 <b-col><b-card
                     title="Servicios"
@@ -39,7 +39,7 @@
                     en la página.
                 </b-card-text>
 
-                <b-button :to="{name: 'servicios'}" variant="success">ir a esta tabla</b-button>
+                <b-button :to="{name: 'servicios'}" variant="primary">ir a esta tabla</b-button>
                 </b-card></b-col>
                 <b-col><b-card
                     title="Ventas"
@@ -50,7 +50,7 @@
                     Acá se encuentra el registro de todas las ventas que se han realizado.
                 </b-card-text>
 
-                <b-button :to="{name: 'ventas'}" variant="success">ir a esta tabla</b-button>
+                <b-button :to="{name: 'ventas'}" variant="primary">ir a esta tabla</b-button>
                 </b-card></b-col>
             </b-row>
         </b-container>
