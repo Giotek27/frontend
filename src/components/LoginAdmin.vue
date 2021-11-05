@@ -35,6 +35,7 @@
         ></b-form-input>
       </b-form-group>
       <b-button type="submit" variant="primary" >Ingresar</b-button>
+      <b-button type="submit" variant="primary" href="https://proyecto-final-54-7.herokuapp.com/">Regresar</b-button>
       </b-card>
     </b-form>
     </div>
